@@ -8,6 +8,13 @@ import { Users, BookOpen, Sprout, Briefcase, Leaf } from "lucide-react";
 export default function Home() {
   return (
     <div className="bg-brand-dark-green min-h-screen">
+      <header className="absolute top-0 left-0 w-full z-50 py-6">
+        <nav className="container-custom flex justify-between items-center">
+          <Link href="/" className="text-brand-peach font-serif text-2xl font-bold tracking-tight">
+            Wojtek Kotyrba
+          </Link>
+        </nav>
+      </header>
       
       {/* SECTION A: HERO */}
       <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden">

@@ -214,7 +214,7 @@ export default function KatalogClient({ initialPlants }: { initialPlants: Plant[
               >
                 <div className="w-[280px]">
                   <div className="mb-8 border-b border-white/10 pb-6">
-                    <h3 className="font-serif text-xl font-bold mb-4">Kategoria</h3>
+                    <h2 className="font-serif text-xl font-bold mb-4">Kategoria</h2>
                     <div className="flex flex-col gap-3">
                       {allCategories.map(cat => (
                         <div key={cat} className="flex items-center gap-3">
@@ -233,7 +233,7 @@ export default function KatalogClient({ initialPlants }: { initialPlants: Plant[
                   </div>
 
                   <div className="mb-8 border-b border-white/10 pb-6">
-                    <h3 className="font-serif text-xl font-bold mb-4">Stanowisko</h3>
+                    <h2 className="font-serif text-xl font-bold mb-4">Stanowisko</h2>
                     <div className="flex flex-col gap-3">
                       {['Słońce', 'Półcień', 'Cień'].map(sun => (
                         <div key={sun} className="flex items-center gap-3">
@@ -247,7 +247,7 @@ export default function KatalogClient({ initialPlants }: { initialPlants: Plant[
                   </div>
                   
                   <div className="mb-8">
-                    <h3 className="font-serif text-xl font-bold mb-4">Dostępność</h3>
+                    <h2 className="font-serif text-xl font-bold mb-4">Dostępność</h2>
                     <div className="flex flex-col gap-3">
                       <div className="flex items-center gap-3">
                         <Checkbox id="avail-now" defaultChecked className="w-5 h-5 rounded border-white/20 bg-white/5 data-[state=checked]:bg-brand-peach data-[state=checked]:text-brand-dark-green data-[state=checked]:border-brand-peach" />
@@ -310,7 +310,7 @@ export default function KatalogClient({ initialPlants }: { initialPlants: Plant[
 
                   <div className="flex justify-between items-end mt-auto pt-2">
                     <div className="flex flex-col">
-                      <h4 className="text-2xl text-brand-sand font-bold m-0 tracking-tight mb-1">{plant.name}</h4>
+                      <h2 className="text-2xl text-brand-sand font-bold m-0 tracking-tight mb-1">{plant.name}</h2>
                       <span className="text-sm text-brand-sand/60 mb-3">{plant.latinName || plant.category}</span>
                       <span className="font-bold text-lg text-brand-peach">{plant.price}</span>
                     </div>

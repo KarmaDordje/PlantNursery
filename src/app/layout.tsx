@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Geist } from "next/font/google";
-import Link from "next/link";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -40,13 +39,6 @@ export default function RootLayout({
   return (
     <html lang="pl" className={cn(inter.variable, playfair.variable, "font-sans", geist.variable)} suppressHydrationWarning>
       <body className="bg-brand-dark-green text-brand-sand min-h-screen" suppressHydrationWarning>
-        <header className="absolute top-0 left-0 w-full z-50 py-6">
-          <nav className="container-custom flex justify-between items-center">
-            <Link href="/" className="text-brand-peach font-serif text-2xl font-bold tracking-tight">
-              Wojtek Kotyrba
-            </Link>
-          </nav>
-        </header>
         <main>
           {children}
         </main>
