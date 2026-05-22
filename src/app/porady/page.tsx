@@ -30,7 +30,7 @@ export default function PoradyPage() {
       <section className="relative w-full min-h-[50vh] flex items-center overflow-hidden mb-16">
         <div className="absolute top-0 right-0 w-full md:w-[65%] h-full z-0 clip-path-diagonal opacity-80">
           <Image
-            src="/hero-leaf-bg-ultra.png"
+            src="/hero-leaf-bg-ultra.jpg"
             alt="Leaf texture"
             fill
             sizes="(max-width: 768px) 100vw, 65vw"

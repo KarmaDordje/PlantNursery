@@ -30,5 +30,12 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "prisma.config.ts",
+    "batch_download.ts",
+    "fixUrls.ts",
+    "updateImages.ts",
+    "updateImagesLoose.ts"
+  ]
 }

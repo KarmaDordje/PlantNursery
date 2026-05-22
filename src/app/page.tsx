@@ -14,7 +14,7 @@ export default function Home() {
         {/* Diagonal split background - Leaf image on the right */}
         <div className="absolute top-0 right-0 w-full md:w-[65%] h-full z-0 clip-path-diagonal">
           <Image 
-            src="/hero-leaf-bg-ultra.png" 
+            src="/hero-leaf-bg-ultra.jpg" 
             alt="Macro leaf texture" 
             fill 
             sizes="(max-width: 768px) 100vw, 65vw"
@@ -59,7 +59,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/section-bg.png" 
+            src="/section-bg.jpg" 
             alt="Organic geometric texture" 
             fill 
             sizes="100vw"

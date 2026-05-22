@@ -57,7 +57,7 @@ export async function uploadFileAction(formData: FormData) {
     const buffer = Buffer.from(arrayBuffer);
     const pdfData = await pdfParse(buffer);
     
-    const lines = pdfData.text.split('\n').filter(l => l.trim() !== '');
+    const lines = (pdfData.text || '').split('\n').filter((l: string) => l.trim() !== '');
     const plantsData = [];
 
     // Heuristic parsing for PDF lines
