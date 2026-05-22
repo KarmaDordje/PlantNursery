@@ -45,12 +45,6 @@ export default function RootLayout({
             <Link href="/" className="text-brand-peach font-serif text-2xl font-bold tracking-tight">
               Wojtek Kotyrba
             </Link>
-            <div className="flex gap-8">
-              <Link href="/katalog" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Katalog</Link>
-              <Link href="/o-nas" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">O nas</Link>
-              <Link href="/uslugi" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Usługi</Link>
-              <Link href="/porady" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Porady</Link>
-            </div>
           </nav>
         </header>
         <main>
