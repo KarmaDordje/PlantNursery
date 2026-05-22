@@ -1,20 +1,27 @@
 import { MetadataRoute } from 'next';
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.wojtekogrodnik.pl';
+  let plantEntries: MetadataRoute.Sitemap = [];
 
-  // Fetch all plants for dynamic catalog routes
-  const plants = await prisma.plant.findMany({
-    select: { id: true, updatedAt: true }
-  });
+  try {
+    // Fetch all plants for dynamic catalog routes
+    const plants = await prisma.plant.findMany({
+      select: { id: true, updatedAt: true }
+    });
 
-  const plantEntries: MetadataRoute.Sitemap = plants.map((plant) => ({
-    url: `${baseUrl}/katalog/${plant.id}`,
-    lastModified: plant.updatedAt,
-    changeFrequency: 'weekly',
-    priority: 0.6,
-  }));
+    plantEntries = plants.map((plant) => ({
+      url: `${baseUrl}/katalog/${plant.id}`,
+      lastModified: plant.updatedAt,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error("Failed to generate plants sitemap:", error);
+  }
 
   return [
     {
