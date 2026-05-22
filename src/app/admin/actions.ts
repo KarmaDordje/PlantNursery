@@ -126,3 +126,17 @@ export async function uploadFileAction(formData: FormData) {
     return { success: true, count: plantsData.length };
   }
 }
+
+export async function togglePlantAvailability(plantId: number) {
+  const plant = await prisma.plant.findUnique({ where: { id: plantId } });
+  if (!plant) return { success: false };
+
+  await prisma.plant.update({
+    where: { id: plantId },
+    data: { isAvailable: !plant.isAvailable },
+  });
+
+  revalidatePath("/admin");
+  revalidatePath("/katalog");
+  return { success: true, isAvailable: !plant.isAvailable };
+}

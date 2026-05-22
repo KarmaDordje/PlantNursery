@@ -1,6 +1,10 @@
 import { PrismaClient } from '@prisma/client';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const prisma = new PrismaClient();
 
@@ -16,12 +20,13 @@ function normalizeName(name: string) {
     .replace(/ć/g, 'c')
     .replace(/ń/g, 'n')
     .replace(/ą/g, 'a')
-    .replace(/ę/g, 'e');
+    .replace(/ę/g, 'e')
+    .replace(/ś/g, 's');
 }
 
 async function main() {
-  const imageDir = path.join(process.cwd(), 'public/images/plants');
-  const files = fs.readdirSync(imageDir).filter(f => f.endsWith('.png'));
+  const imageDir = path.join(__dirname, 'public/images/plants');
+  const files = fs.readdirSync(imageDir).filter(f => f.endsWith('.png') || f.endsWith('.jpg'));
 
   console.log('Found images:', files);
 
@@ -35,12 +40,21 @@ async function main() {
     // Try an exact match with the filename (without .png)
     let match = files.find(f => f.replace('.png', '') === normalized);
 
-    // If no exact match, try a loose match (e.g., if image name is a substring of the normalized name or vice versa)
+    // If no exact match, try a loose match
     if (!match) {
         match = files.find(f => {
-            const fileName = f.replace('.png', '');
-            return normalized.includes(fileName) || fileName.includes(normalized);
+            const fileName = f.replace(/\.(png|jpg|jpeg)$/, '');
+            // Check if plant name starts with the image name (e.g., 'magnolia' matches 'magnolia susan')
+            return normalized.startsWith(fileName) || fileName.startsWith(normalized);
         });
+    }
+
+    if (!match) {
+        // Even looser: try the first word of the plant name
+        const firstWord = normalized.split('_')[0];
+        if (firstWord.length > 3) {
+            match = files.find(f => f.startsWith(firstWord));
+        }
     }
 
     if (match) {

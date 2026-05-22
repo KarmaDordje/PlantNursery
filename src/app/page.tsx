@@ -95,7 +95,7 @@ export default function Home() {
                     <div className="w-16 h-16 rounded-full border-2 border-brand-sand/30 flex items-center justify-center mb-6 text-brand-sand">
                       <item.icon size={28} strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-brand-sand font-bold text-xl mb-4">{item.title}</h3>
+                    <h2 className="text-brand-sand font-bold text-xl mb-4">{item.title}</h2>
                     <p className="text-brand-sand/60 text-sm leading-relaxed font-medium">
                       {item.desc}
                     </p>
@@ -117,7 +117,7 @@ export default function Home() {
                 <div className="w-20 h-20 rounded-full bg-[#193126] shadow-[8px_8px_16px_rgba(0,0,0,0.3)] flex items-center justify-center text-brand-sand mb-8 group-hover:scale-110 transition-transform">
                   <div className="w-8 h-8 rounded-full border-4 border-dashed border-brand-sand" />
                 </div>
-                <h3 className="text-brand-sand font-bold text-xl mb-4">Wiosenne Promocje</h3>
+                <h2 className="text-brand-sand font-bold text-xl mb-4">Wiosenne Promocje</h2>
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Skorzystaj z naszych wyjątkowych ofert na sezon wiosenny. Najlepsze odmiany krzewów owocowych w atrakcyjnych cenach na rozpoczęcie sezonu.
                 </p>
@@ -131,7 +131,7 @@ export default function Home() {
                 <div className="w-20 h-20 rounded-full bg-[#193126] shadow-[8px_8px_16px_rgba(0,0,0,0.4)] flex items-center justify-center text-brand-sand mb-8 group-hover:scale-110 transition-transform">
                   <Leaf size={32} fill="currentColor" />
                 </div>
-                <h3 className="text-brand-sand font-bold text-xl mb-4">Nowości</h3>
+                <h2 className="text-brand-sand font-bold text-xl mb-4">Nowości</h2>
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Odkryj najnowsze gatunki roślin, które właśnie dotarły do naszej szkółki. Stale poszerzamy naszą ofertę o unikalne i rzadkie okazy botaniczne.
                 </p>
@@ -148,7 +148,7 @@ export default function Home() {
                     <div className="w-2 h-6 bg-current rounded-full -rotate-45" />
                   </div>
                 </div>
-                <h3 className="text-brand-sand font-bold text-xl mb-4">Bestsellery</h3>
+                <h2 className="text-brand-sand font-bold text-xl mb-4">Bestsellery</h2>
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Najchętniej wybierane rośliny przez naszych klientów. Sprawdzone, odporne i pięknie prezentujące się odmiany, które ozdobią każdy ogród.
                 </p>
@@ -181,7 +181,7 @@ export default function Home() {
                     <div className="w-3 h-3 bg-current rounded-full" />
                   </div>
                 </div>
-                <h3 className="text-brand-sand font-bold text-xl mb-4">Nasz Zespół</h3>
+                <h2 className="text-brand-sand font-bold text-xl mb-4">Nasz Zespół</h2>
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Poznaj ekspertów, którzy codziennie dbają o najwyższą jakość naszych roślin. Zawsze chętnie doradzimy Ci w doborze idealnych gatunków do Twojego ogrodu.
                 </p>
@@ -199,7 +199,7 @@ export default function Home() {
                     <div className="w-6 h-1 bg-current rounded-full" />
                   </div>
                 </div>
-                <h3 className="text-[#3d291b] font-bold text-xl mb-4">Kontakt</h3>
+                <h2 className="text-[#3d291b] font-bold text-xl mb-4">Kontakt</h2>
                 <p className="text-[#3d291b]/70 text-sm leading-relaxed px-4 font-medium">
                   Masz pytania dotyczące naszej oferty lub potrzebujesz wsparcia w projektowaniu ogrodu? Skontaktuj się z nami bezpośrednio poprzez formularz lub zadzwoń.
                 </p>

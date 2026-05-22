@@ -20,6 +20,9 @@ export async function fetchPlants(page: number, limit: number = 15, searchQuery?
     conditions.push({ category: { in: categories } });
   }
 
+  // Always filter to only available plants
+  conditions.push({ isAvailable: true });
+
   const where = conditions.length > 0 ? { AND: conditions } : {};
 
   const plants = await prisma.plant.findMany({

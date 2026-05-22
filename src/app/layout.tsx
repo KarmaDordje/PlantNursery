@@ -40,20 +40,33 @@ export default function RootLayout({
   return (
     <html lang="pl" className={cn(inter.variable, playfair.variable, "font-sans", geist.variable)} suppressHydrationWarning>
       <body className="bg-brand-dark-green text-brand-sand min-h-screen" suppressHydrationWarning>
+        <header className="absolute top-0 left-0 w-full z-50 py-6">
+          <nav className="container-custom flex justify-between items-center">
+            <Link href="/" className="text-brand-peach font-serif text-2xl font-bold tracking-tight">
+              Wojtek Kotyrba
+            </Link>
+            <div className="flex gap-8">
+              <Link href="/katalog" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Katalog</Link>
+              <Link href="/o-nas" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">O nas</Link>
+              <Link href="/uslugi" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Usługi</Link>
+              <Link href="/porady" className="text-brand-sand/80 hover:text-brand-peach transition-colors font-medium">Porady</Link>
+            </div>
+          </nav>
+        </header>
         <main>
           {children}
         </main>
-        <footer className="bg-black/20 text-brand-sand py-16 mt-12">
+        <footer className="bg-black/30 text-brand-sand py-16 mt-12">
           <div className="container-custom flex flex-col md:flex-row justify-between gap-8">
             <div>
               <h3 className="text-brand-peach font-serif text-xl mb-2">Wojciech Kotyrba</h3>
-              <p className="text-brand-sand/60">Szkółka Roślin Ozdobnych<br/>ul. Łęczycka 17, 85-737 Bydgoszcz</p>
+              <p className="text-brand-sand/90 font-medium">Szkółka Roślin Ozdobnych<br/>ul. Łęczycka 17, 85-737 Bydgoszcz</p>
             </div>
             <div className="md:text-right">
-              <p className="text-brand-sand/60">
-                <a href="tel:503935055" className="hover:text-brand-peach transition-colors block mb-1">Tel: 503 935 055</a>
-                Otwarte: Pn-Pt 10.00 - 17.00, Sob 10.00 - 14.00
-              </p>
+              <div className="text-brand-sand/90 font-medium">
+                <a href="tel:503935055" className="hover:text-brand-peach transition-colors inline-block py-3 mb-1 min-h-[44px]">Tel: 503 935 055</a>
+                <p>Otwarte: Pn-Pt 10.00 - 17.00, Sob 10.00 - 14.00</p>
+              </div>
             </div>
           </div>
         </footer>
