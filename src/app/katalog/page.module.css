@@ -1,0 +1,113 @@
+.katalogContainer {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.filtersSidebar {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: var(--bg-secondary);
+  padding: 24px;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+.filterGroup {
+  margin-bottom: 24px;
+}
+
+.filterTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-forest-green);
+  font-family: var(--font-playfair), serif;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.filterLabel:hover {
+  color: var(--color-forest-green);
+}
+
+.plantGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.headerArea {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pageTitle {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.resultsCount {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.filterBar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.filterBar::-webkit-scrollbar {
+  display: none;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-sage);
+  background: transparent;
+  color: var(--text-primary);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.filterButton:hover {
+  background-color: var(--color-sage);
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .katalogContainer {
+    flex-direction: column;
+  }
+  
+  .filtersSidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
