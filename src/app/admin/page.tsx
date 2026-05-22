@@ -26,10 +26,10 @@ export default async function AdminPage() {
     return (
       <main className="p-4 md:p-10 mx-auto max-w-7xl flex flex-col items-center justify-center min-h-[60vh]">
         <Card className="max-w-md text-center">
-          <Title>Zaloguj się</Title>
-          <Text className="mt-2 mb-6">Musisz być zalogowany przez GitHub, aby uzyskać dostęp do panelu administratora.</Text>
+          <Title>Panel Administratora</Title>
+          <Text className="mt-2 mb-6">Musisz się zalogować, aby uzyskać dostęp do panelu administratora.</Text>
           <Link href="/api/auth/signin">
-            <Button size="lg" className="w-full">Zaloguj się przez GitHub</Button>
+            <Button size="lg" className="w-full">Zaloguj się</Button>
           </Link>
         </Card>
       </main>

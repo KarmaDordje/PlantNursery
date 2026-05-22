@@ -28,11 +28,11 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-black/40 md:bg-black/10" />
         </div>
 
         <div className="container-custom relative z-10">
-          <div className="max-w-[500px]">
+          <div className="max-w-[500px] bg-brand-dark-green/60 md:bg-transparent backdrop-blur-md md:backdrop-blur-none p-6 md:p-0 rounded-3xl md:rounded-none border border-white/10 md:border-none shadow-xl md:shadow-none">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-brand-sand/80 text-lg md:text-xl leading-relaxed mb-10 font-sans font-medium"
+              className="text-brand-sand md:text-brand-sand/80 text-lg md:text-xl leading-relaxed mb-10 font-sans font-medium"
             >
               Odkryj naszą starannie wyselekcjonowaną kolekcję roślin ozdobnych i owocowych. Z pasją tworzymy piękno dla Twojego ogrodu, oferując najwyższej jakości sadzonki.
             </motion.p>
@@ -115,7 +115,6 @@ export default function Home() {
           {/* SECTION C: 3x2 SQUARE GRID */}
           <section className="container-custom pb-32">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              
               {/* Card 1 */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
@@ -128,6 +127,7 @@ export default function Home() {
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Skorzystaj z naszych wyjątkowych ofert na sezon wiosenny. Najlepsze odmiany krzewów owocowych w atrakcyjnych cenach na rozpoczęcie sezonu.
                 </p>
+                <Link href="/promocje" className="absolute inset-0 z-10" aria-label="Wiosenne Promocje" />
               </motion.div>
 
               {/* Card 2 */}
@@ -142,6 +142,7 @@ export default function Home() {
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Odkryj najnowsze gatunki roślin, które właśnie dotarły do naszej szkółki. Stale poszerzamy naszą ofertę o unikalne i rzadkie okazy botaniczne.
                 </p>
+                <Link href="/nowosci" className="absolute inset-0 z-10" aria-label="Nowości" />
               </motion.div>
 
               {/* Card 3 */}
@@ -159,6 +160,7 @@ export default function Home() {
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Najchętniej wybierane rośliny przez naszych klientów. Sprawdzone, odporne i pięknie prezentujące się odmiany, które ozdobią każdy ogród.
                 </p>
+                <Link href="/bestsellery" className="absolute inset-0 z-10" aria-label="Bestsellery" />
               </motion.div>
 
               {/* Card 4 (Image) */}
@@ -192,6 +194,7 @@ export default function Home() {
                 <p className="text-brand-sand/70 text-sm leading-relaxed px-4 font-medium">
                   Poznaj ekspertów, którzy codziennie dbają o najwyższą jakość naszych roślin. Zawsze chętnie doradzimy Ci w doborze idealnych gatunków do Twojego ogrodu.
                 </p>
+                <Link href="/o-nas" className="absolute inset-0 z-10" aria-label="Nasz Zespół" />
               </motion.div>
 
               {/* Card 6 */}
@@ -210,8 +213,8 @@ export default function Home() {
                 <p className="text-[#3d291b]/70 text-sm leading-relaxed px-4 font-medium">
                   Masz pytania dotyczące naszej oferty lub potrzebujesz wsparcia w projektowaniu ogrodu? Skontaktuj się z nami bezpośrednio poprzez formularz lub zadzwoń.
                 </p>
+                <Link href="/kontakt" className="absolute inset-0 z-10" aria-label="Kontakt" />
               </motion.div>
-
             </div>
           </section>
         </div>
