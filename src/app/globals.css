@@ -168,14 +168,14 @@ img, video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  z-index: 1000;
   padding: 20px 0;
-  background: rgba(244, 241, 235, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(138, 154, 134, 0.2);
-  transition: all var(--transition-fast);
+  border-bottom: 1px solid rgba(43, 69, 34, 0.1);
+  transition: all 0.3s ease;
 }
 
 .navbar .container {
@@ -190,8 +190,25 @@ img, video {
 }
 
 .nav-links a {
+  position: relative;
   font-weight: 500;
   font-size: 0.95rem;
+  color: var(--color-forest-green);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-sage);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .logo {
