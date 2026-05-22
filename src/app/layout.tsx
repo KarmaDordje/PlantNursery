@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Geist } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,36 +35,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const linkClass = "relative font-medium text-[0.95rem] text-forest-green after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-sage hover:after:w-full after:transition-all after:duration-300";
+
   return (
-    <html lang="pl" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>
-        <nav className="navbar">
-          <div className="container">
-            <Link href="/" className="logo">
-              🌿 Wojtek Ogrodnik
-            </Link>
-            <div className="nav-links">
-              <Link href="/o-nas">O nas</Link>
-              <Link href="/katalog">Katalog Roślin</Link>
-              <Link href="/uslugi">Usługi</Link>
-              <Link href="/porady">Porady</Link>
-              <Link href="/kontakt">Kontakt</Link>
-            </div>
-          </div>
-        </nav>
-        <main style={{ paddingTop: '80px' }}>
+    <html lang="pl" className={cn(inter.variable, playfair.variable, "font-sans", geist.variable)} suppressHydrationWarning>
+      <body className="bg-brand-dark-green text-brand-sand min-h-screen" suppressHydrationWarning>
+        <main>
           {children}
         </main>
-        <footer className="footer">
-          <div className="container" style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <footer className="bg-black/20 text-brand-sand py-16 mt-12">
+          <div className="container-custom flex flex-col md:flex-row justify-between gap-8">
             <div>
-              <h3 style={{ color: 'white' }}>Wojciech Kotyrba</h3>
-              <p style={{ color: 'var(--color-sage-light)' }}>Szkółka Roślin Ozdobnych<br/>ul. Łęczycka 17, 85-737 Bydgoszcz</p>
+              <h3 className="text-brand-peach font-serif text-xl mb-2">Wojciech Kotyrba</h3>
+              <p className="text-brand-sand/60">Szkółka Roślin Ozdobnych<br/>ul. Łęczycka 17, 85-737 Bydgoszcz</p>
             </div>
-            <div style={{ textAlign: 'right' }}>
-              <p style={{ color: 'var(--color-sage-light)' }}>
-                <a href="tel:503935055">Tel: 503 935 055</a><br/>
-                Otwartę: Pn-Pt 10.00 - 17.00, Sob 10.00 - 14.00
+            <div className="md:text-right">
+              <p className="text-brand-sand/60">
+                <a href="tel:503935055" className="hover:text-brand-peach transition-colors block mb-1">Tel: 503 935 055</a>
+                Otwarte: Pn-Pt 10.00 - 17.00, Sob 10.00 - 14.00
               </p>
             </div>
           </div>
