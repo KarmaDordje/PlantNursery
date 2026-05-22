@@ -99,14 +99,14 @@ export default function ONasPage() {
                 <p>
                   Początkowo podstawę naszej produkcji stanowiły rośliny iglaste, m.in. tuje, cyprysiki, jałowce, sosny i świerki – także formy karłowe i szczepione. Z roku na rok zwiększaliśmy także ofertę roślin liściastych. Bogactwo gatunków i odmian o różnym pokroju, barwie liści czy sile wzrostu pozwala wybrać rośliny idealne do Państwa ogrodu.
                 </p>
-                <div className="relative h-[300px] w-full rounded-[32px] overflow-hidden my-10 shadow-2xl">
+                <div className="relative h-[400px] w-full rounded-[32px] overflow-hidden my-10 shadow-2xl">
                   <Image 
-                    src="https://images.unsplash.com/photo-1585320806297-9794b3e4ce88?q=80&w=2069&auto=format&fit=crop"
-                    alt="Nursery rows"
+                    src="/images/plants/sosna_czarna_100_120cm.jpg"
+                    alt="Sadzonki w naszej szkółce"
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-green/80 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-dark-green/40 to-transparent" />
                 </div>
                 <p>
                   Wszystkie rośliny produkujemy w doniczkach - są w pełni ukorzenione. Dzięki temu mogą je Państwo sadzić przez cały sezon. Kilku- i kilkunastoletnie rośliny można obejrzeć w naszym pokazowym ogrodzie.
